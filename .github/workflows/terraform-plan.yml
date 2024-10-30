@@ -20,6 +20,10 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v2
 
+    - name: Terraform fmt check
+      id: fmt
+      run: terraform fmt -check
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
