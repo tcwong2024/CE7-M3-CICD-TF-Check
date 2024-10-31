@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "simple-bucket" {
-  bucket = "wtc-tf-ci-bucket-20241030"
+  bucket = var.bucket_name
 
   #checkov:skip=CKV_AWS_18:Ensure the S3 bucket has access logging enabled
   #checkov:skip=CKV2_AWS_61:Ensure that an S3 bucket has a lifecycle configuration
@@ -8,5 +8,13 @@ resource "aws_s3_bucket" "simple-bucket" {
   #checkov:skip=CKV2_AWS_6:Ensure that S3 bucket has a Public Access block
   #checkov:skip=CKV_AWS_144:Ensure that S3 bucket has cross-region replication enabled
   #checkov:skip=CKV_AWS_21:Ensure all data stored in the S3 bucket have versioning enabled
+}
 
+# Enable S3 bucket versioning - Snyk recommended
+resource "aws_s3_bucket_versioning" "s3_bucket_versioning" {
+  bucket = aws_s3_bucket.simple-bucket.bucket
+
+  versioning_configuration {
+    status = "Enabled"
+  }
 }
