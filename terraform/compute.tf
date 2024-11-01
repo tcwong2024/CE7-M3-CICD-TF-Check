@@ -1,5 +1,5 @@
 #################################################################################
-# EC2 Instance
+# EC2 Instance - this ec2 is not completed, use for vulnerability testing 
 #################################################################################
 
 resource "aws_instance" "wtc_tf_instance" {
