@@ -1,4 +1,4 @@
-name: Terraform Checks
+name: WF 1 Terraform Checks
 
 on:
   pull_request:
