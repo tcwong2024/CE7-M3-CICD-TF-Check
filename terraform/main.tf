@@ -1,6 +1,11 @@
 resource "aws_s3_bucket" "simple-bucket" {
   bucket = var.bucket_name
 
+  logging {
+    target_bucket = var.target_bucket
+    target_prefix = var.target_prefix
+  }
+
   #checkov:skip=CKV_AWS_18:Ensure the S3 bucket has access logging enabled
   #checkov:skip=CKV2_AWS_61:Ensure that an S3 bucket has a lifecycle configuration
   #checkov:skip=CKV2_AWS_62:Ensure S3 buckets should have event notifications enabled
