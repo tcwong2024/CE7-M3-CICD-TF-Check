@@ -36,11 +36,12 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "key_name" {
-  description = "EC2 Key Pair pair"
-  type        = string
-  default     = "wtc-keypair-useast1"
-}
+# variable.tf:39:1: Warning - variable "key_name" is declared but not used (terraform_unused_declarations)
+# variable "key_name" {
+#   description = "EC2 Key Pair pair"
+#   type        = string
+#   default     = "wtc-keypair-useast1"
+# }
 
 variable "ec2_name" {
   description = "EC2 name"
