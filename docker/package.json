@@ -1,0 +1,22 @@
+{
+  "name": "ce7-m3-cicd-tf-check",
+  "version": "1.0.0",
+  "description": "cicd for ecs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand --detectOpenHandles --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcwong2024/CE7-M3-CICD-TF-Check.git"
+  },
+  "author": "wtc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tcwong2024/CE7-M3-CICD-TF-Check/issues"
+  },
+  "homepage": "https://github.com/tcwong2024/CE7-M3-CICD-TF-Check#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
