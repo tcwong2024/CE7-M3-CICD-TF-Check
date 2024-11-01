@@ -1,4 +1,4 @@
-name: WF4 Docker Build and Test
+name: WF 4 Docker Build and Test
 on:
   pull_request:
     branches:
