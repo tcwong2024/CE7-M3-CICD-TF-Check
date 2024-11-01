@@ -46,7 +46,8 @@ jobs:
         run: |
             docker build -t simple-docker-image:latest .
       - name: Run image scan
-        uses: aquasecurity/trivy-action@master
+        # uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@0.53.2
         with:
           image-ref: 'simple-docker-image:latest'
           format: 'table'
