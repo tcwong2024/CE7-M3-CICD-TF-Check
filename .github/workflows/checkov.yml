@@ -1,4 +1,4 @@
-name: Checkov
+name: WF 2 Checkov
 
 on:
   pull_request:
