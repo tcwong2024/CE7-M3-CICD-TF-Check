@@ -1,3 +1,13 @@
+variable "region_name" {
+  description = "region name"
+  type        = string
+  default     = "us-east-1"
+}
+
+# ------------------------------------------------------------
+# Variable for S3 bucket
+# ------------------------------------------------------------
+
 variable "bucket_name" {
   description = "bucket_name"
   type        = string
@@ -14,4 +24,32 @@ variable "target_prefix" {
   description = "Target prefix logging"
   type        = string
   default     = "wtc-logs/"
+}
+
+# ------------------------------------------------------------
+# Variable for EC2 
+# ------------------------------------------------------------
+
+variable "instance_type" {
+  description = "EC2 Instance type"
+  type        = string
+  default     = "t2.micro"
+}
+
+variable "key_name" {
+  description = "EC2 Key Pair pair"
+  type        = string
+  default     = "wtc-keypair-useast1"
+}
+
+variable "ec2_name" {
+  description = "EC2 name"
+  type        = string
+  default     = "wtc-tf-ec2"
+}
+
+variable "securityGrp_name" {
+  description = "securiry group name"
+  type        = string
+  default     = "wtc-tf-sg-allow-ssh-http-https"
 }
