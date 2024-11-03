@@ -1,6 +1,6 @@
 # Assignment 3.10
 
-### Implement CI with Terraform
+### Implement CI with Terraform (Detect and fix vulnerability, error and program code bug)
 
 #### 1. Create workflows (YAML files) and git push into Github actions under main branch. 
 - checkov.yml
